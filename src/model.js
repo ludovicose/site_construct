@@ -1,8 +1,8 @@
 import image from './assets/image.png'
-import {Block} from "./classes/block";
+import {TextBlock, ColumnsBlock, TitleBlock, ImageBlock} from "./classes/block";
 
 export const model = [
-    new Block('title','Конструктор сайтов',{
+    new TitleBlock('Конструктор сайтов',{
         tag: 'h2',
         styles: {
             background: 'linear-gradient(to right,#ff0099,#493240)',
@@ -11,7 +11,7 @@ export const model = [
             padding: '1.5rem'
         }
     }),
-    new Block('image', image,{
+    new ImageBlock(image,{
         styles: {
             padding: '2rem 0',
             display: 'flex',
@@ -23,14 +23,14 @@ export const model = [
         },
         alt: 'Это картинка'
     }),
-    new Block('text','Some text',{
+    new TextBlock('Some text',{
         styles: {
             background: 'linear-gradient(to left, #f2994a, #f2c94c)',
             padding: '1rem',
             'font-weight': 'bold'
         }
     }),
-    new Block('columns',[
+    new ColumnsBlock([
         '1111111',
         '2222222',
         '33333333',
