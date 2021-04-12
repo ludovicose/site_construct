@@ -1,14 +1,6 @@
-import {model} from "./model";
-import {Site} from "./classes/site";
-import {Sidebar} from "./classes/sidebar";
 import './styles/main.css'
-import {block} from "./utils";
+import {App} from "./classes/app";
+import {model} from "./model";
 
-const site = new Site('#site')
-site.render(model)
+new App(model).init()
 
-
-new Sidebar('#panel',newBlock =>{
-   model.push(newBlock)
-   site.render(model)
-})
